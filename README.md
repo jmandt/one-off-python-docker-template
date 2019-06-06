@@ -1,2 +1,5 @@
-# one-off-python-docker-template
-This repository is serves as a minimal boilerplate that can be used for one-off tasks, meaning the container start a script and then stops when the script is finished
+docker build -t ${SERVICE_NAME}:${IMAGE_TAG} .
+
+docker run -e ENVIRONMENT=local_docker \
+           --network="host" \
+           -it -t ${SERVICE_NAME}:${IMAGE_TAG} 
