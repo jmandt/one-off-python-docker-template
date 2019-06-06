@@ -2,4 +2,4 @@ import os
 
 ENVIRONMENT = os.environ["ENVIRONMENT"]
 
-print("Python script running works in {env}.".format(env=ENVIRONMENT))
+print("Python script running in {env}.".format(env=ENVIRONMENT))

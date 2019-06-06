@@ -12,9 +12,6 @@ COPY python  ./home/python/
 ENV PATH /opt/conda/envs/$(head -1 /tmp/environment.yml | cut -d' ' -f2)/bin:$PATH
 ENV PYTHONPATH="$PYTHONPATH:/home/python-scripts"
 
-COPY setup.sh ./
-RUN chmod +x setup.sh
-
 RUN bash -c "source ~/.bashrc"
 RUN bash -c "source activate $(head -1 /tmp/environment.yml | cut -d' ' -f2)"
 
